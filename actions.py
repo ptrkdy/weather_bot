@@ -27,6 +27,7 @@ class ActionJoke(Action):
         dispatcher.utter_message(joke)  # send the message back to the user
         return []
 
+
 class ProvideWeather(Action):
     def name(self):
         # define the name of the action which can then be included in training stories
@@ -37,9 +38,10 @@ class ProvideWeather(Action):
 
         api_key = "60226e96c08099f9a5c196d66d4be818"
         api_url = "http://api.openweathermap.org/data/2.5/weather"
-        
+
         zipcode_slot = tracker.get_slot('zipcode')
-        query_string_payload = {'units': 'metric', 'zip': zipcode_slot, 'appid': api_key}
+        query_string_payload = {'units': 'metric',
+                                'zip': zipcode_slot, 'appid': api_key}
 
         response = requests.get(api_url, params=query_string_payload)
 
@@ -47,6 +49,9 @@ class ProvideWeather(Action):
 
         temp_temp = int(response_data['main']['temp'])
 
-        weather = str(temp_temp)  # extract a joke from returned json response
-        dispatcher.utter_message(weather)  # send the message back to the user
+        weather = str(temp_temp)
+        # return nice text to the user
+        weather_nice_text = "The temperature in " + tracker.get_slot('zipcode') + " is " + weather + " degrees Celsius"
+        # send the message back to the user
+        dispatcher.utter_message(weather_nice_text)
         return []
