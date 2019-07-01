@@ -1,75 +1,65 @@
 intents:
-- greet
-- goodbye
-- thanks
+- affirm
 - deny
+- goodbye
+- greet
 - joke
 - name
 - provide_address
 - provide_city
-- provide_zipcode
 - provide_state
+- provide_zipcode
 - status
-
+- thanks
+- weather
 entities:
-- name
 - address
 - city
-- zipcode
+- name
 - state
 - weather
-
-
+- zipcode
 slots:
-  name:
-    type: text
   address:
     type: text
   city:
     type: text
-  zipcode:
+  name:
     type: text
   state:
     type: text
-
-
-actions:
-- utter_name
-- utter_thanks
-- utter_greet
-- utter_goodbye
-- utter_address
-- utter_city
-- utter_zipcode
-- utter_state
-- utter_status
-- action_joke
-- get_weather
-
+  zipcode:
+    type: text
 templates:
   utter_name:
-  - text: "Hey there! Tell me your name."
-
+  - text: Hey there! Tell me your name.
   utter_greet:
-  - text: "Nice to you meet you {name}. How can I help?"
-
+  - text: Nice to you meet you {name}. How can I help?
   utter_goodbye:
-  - text: "Talk to you later!"
-  
+  - text: Talk to you later!
   utter_thanks:
-  - text: "My pleasure."
-  
+  - text: My pleasure.
   utter_address:
-  - text: "Hey there! Your address is {address}."
-
+  - text: Hey there! Your address is {address}.
   utter_city:
-  - text: "Nice to you meet you {name}. Your city is {city}"
-
+  - text: Nice to you meet you {name}. Your city is {city}
   utter_zipcode:
-  - text: "Talk to you later! Your zipcode is {zipcode}"
-  
+  - text: Talk to you later! Your zipcode is {zipcode}
   utter_state:
-  - text: "My pleasure. Your state is {state}"
-
+  - text: My pleasure. Your state is {state}
   utter_status:
-  - text: "Your slots values are state:{state}, city:{city}, zipcode:{zipcode}, address:{address}"
+  - text: Your slots values are state:{state}, city:{city}, zipcode:{zipcode}, address:{address},
+      name {name}
+actions:
+- action_joke
+- get_next_question
+- get_weather
+- utter_address
+- utter_city
+- utter_goodbye
+- utter_greet
+- utter_name
+- utter_state
+- utter_status
+- utter_thanks
+- utter_zipcode

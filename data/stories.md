@@ -36,23 +36,29 @@
 ## story_address
 * provide_address
  - utter_address
+ - get_next_question
 
 ## story_city
 * provide_city
  - utter_city
+ - get_next_question
 
 ## story_zipcode
 * provide_zipcode
  - utter_zipcode
+ - get_next_question
 
 ## story_state
 * provide_state
  - utter_state
+ - get_next_question
 
 ## story_weather
 * weather
  - get_weather
+ - get_next_question
 
 ## story_status
 * status
  - utter_status
+ - get_next_question
