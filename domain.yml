@@ -54,6 +54,7 @@ actions:
 - action_joke
 - get_next_question
 - get_weather
+- get_open_slots
 - utter_address
 - utter_city
 - utter_goodbye

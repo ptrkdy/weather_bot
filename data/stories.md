@@ -60,5 +60,6 @@
 
 ## story_status
 * status
+ - get_open_slots
  - utter_status
  - get_next_question

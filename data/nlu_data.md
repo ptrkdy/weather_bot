@@ -106,6 +106,7 @@
 - my name is kyle
 - my name is [Kyle](name)
 - my name is [Jasper](name)
+- my name is [Patrick](name)
 
 ## intent:provide_address
 - my address is [100 long street](address)
@@ -118,6 +119,7 @@
 - [12 steel st](address) is the address
 - My address is [150 broadway st](address)
 - my address is [150 broadway st](address)
+- my address is [150 east st](address)
 
 ## intent:provide_city
 - my city is [New York](city)
@@ -140,6 +142,7 @@
 - My home is located in [NSW](state)
 - [Victoria](state) is the state
 - [Washington](state) is the state
+- my state is [CA](state)
 
 ## intent:provide_zipcode
 - my zipcode is [10009](zipcode)
@@ -193,3 +196,4 @@
 - weather
 - what is the weather
 - how is the weather
+- get weather

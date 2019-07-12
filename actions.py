@@ -58,6 +58,31 @@ class ProvideWeather(Action):
         dispatcher.utter_message(weather_nice_text)
         return []
 
+# prove I can add a random aspect to next question
+# prove I can access the open slots logically
+
+
+class CheckOpenSlots(Action):
+    def name(self):
+        # define the name of the action which can then be included in training stories
+        return "get_open_slots"
+
+    def run(self, dispatcher, tracker, domain):
+        # what your action should do
+
+        get_open_slots = tracker.current_slot_values()
+
+        somestring = str(get_open_slots)
+
+        # events can be used to set actions to take place in future
+
+        # send the message back to the user
+        dispatcher.utter_message(somestring)
+        return []
+
+
+# intial questions should quickly verify sets of information that are needed or not 
+
 
 class DetermineNextQuestion(Action):
     def name(self):
