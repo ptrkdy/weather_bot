@@ -56,4 +56,10 @@ fancy = {'begin': [None, ['ornate']],
          'verb2': [verb, ['end']],
          'end': [None, [None]]}
 
-print(walk_graph(fancy))
+def Generate_Random_Statement():
+    print(walk_graph(fancy))
+
+Generate_Random_Statement()
+
+
+# TO DO: Clean up supporting adjectives, nouns, reference sentences etc.
