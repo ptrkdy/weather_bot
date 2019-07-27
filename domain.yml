@@ -53,8 +53,8 @@ templates:
 actions:
 - action_joke
 - get_next_question
-- get_weather
 - get_open_slots
+- get_weather
 - utter_address
 - utter_city
 - utter_goodbye
