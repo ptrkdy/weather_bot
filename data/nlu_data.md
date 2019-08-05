@@ -108,6 +108,7 @@
 - my name is [Jasper](name)
 - my name is [Patrick](name)
 - I need insurance
+- my name is [Cristina](name)
 
 ## intent:provide_address
 - my address is [100 long street](address)
